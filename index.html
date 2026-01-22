@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .code-box {
+      display: none;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .msg {
+      margin-top: 10px;
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>I Love You So Much ❤️</h1>
+    <p>This page is only for you 🫶🏻</p>
+
+    <button onclick="showCode()">Click to Read the Letter 💌</button>
+
+    <div class="code-box" id="codeBox">
+      <p>Enter the secret code to unlock my heart 💖</p>
+      <input type="password" id="code" placeholder="Enter code">
+      <br>
+      <button onclick="checkCode()">Unlock ❤️</button>
+      <div class="msg" id="msg"></div>
+    </div>
+  </div>
+
+  <script>
+    function showCode() {
+      document.getElementById("codeBox").style.display = "block";
+    }
+
+    function checkCode() {
+      const code = document.getElementById("code").value;
+      const msg = document.getElementById("msg");
+
+      if (code === "1214") {
+        msg.innerHTML = "Unlocked 💖";
+        setTimeout(() => {
+          window.location.href = "letter.html";
+        }, 1000);
+      } else {
+        msg.innerHTML = "Hmm… that’s not the code 🥺";
+      }
+    }
+  </script>
+
+</body>
+</html>
